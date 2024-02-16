@@ -1,8 +1,8 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE : 16/02/2024
+## NAME :Nihil KK																			             
+## ROLLNUMBER :212221223003
+## DEPARTMENT : IT
 
 
 ## AIM:
@@ -52,7 +52,7 @@ FIGURE-02
 ## CIRCUIT DIAGRAM 
 
 
-![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
+![image](https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/118120621/63b64206-df3d-4c3e-971c-b11b428d8fb7)
 
 
 
@@ -62,6 +62,33 @@ FIGURE -03
 
 
 ## PROGRAM 
+
+int led=3;
+int pushbutton=4;
+
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(pushbutton,INPUT);
+}
+
+void loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if(pb==HIGH)
+  {
+    digitalWrite(led,HIGH);
+    delay(500);
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+}
  
  
 
@@ -81,5 +108,11 @@ FIGURE -03
 
 ## OUTPUT OF SIMULATION :
 
-[My image](username.github.com/repository/img/image.jpg)
+## OFF condition :
+![image](https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/118120621/e8fb9952-08f6-4ea5-a7f3-65bf2ac59bff)
+
+## ON condition:
+![image](https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/118120621/3bdf8e9e-bd89-4ef4-93d3-f49c0bf3f527)
+
+
 
